@@ -61,8 +61,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/
 ADD ./ejabberd.yml /etc/ejabberd/
 ADD ./ejabberdctl.cfg /etc/ejabberd/
 
-RUN rm /etc/ejabberd/ejabberd.yml && \
-    touch /var/log/ejabberd/dummy && \
+RUN touch /var/log/ejabberd/dummy && \
     touch /var/lib/ejabberd/dummy && \
     touch /etc/ejabberd/dummy && \
     chown -R ejabberd:ejabberd /var/log/ejabberd && \
