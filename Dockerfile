@@ -67,6 +67,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/
 
 ADD ./ejabberd.yml /etc/ejabberd/
 ADD ./ejabberdctl.cfg /etc/ejabberd/
+ADD ./xmlrpc.cfg /etc/ejabberd/
 
 RUN touch /var/log/ejabberd/dummy && \
     touch /var/lib/ejabberd/dummy && \
