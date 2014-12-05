@@ -1,7 +1,8 @@
 # Ejabberd 14.07
 FROM ubuntu:14.04
 # ORIGINAL MAINTAINER Rafael Römhild <rafael@roemhild.de>
-MAINTAINER John Regan <john@jrjrtech.com>
+# ORIGINAL MAINTAINER John Regan <john@jrjrtech.com>
+MAINTAINER Askar Bakirov <b.asqar@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -77,6 +78,6 @@ VOLUME ["/etc/ejabberd"]
 VOLUME ["/var/log/ejabberd"]
 VOLUME ["/var/lib/ejabberd"]
 
-EXPOSE 5222 5269 5280
+EXPOSE 5222 5269 5280 4560
 CMD ["start"]
 ENTRYPOINT ["ejabberdctl"]
