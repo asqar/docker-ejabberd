@@ -33,9 +33,9 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/
     cd / && rm -rf /src/erlang && \
     mkdir -p /src/ejabberd && \
     cd /src/ejabberd && \
-    curl -R -L -O "http://www.process-one.net/downloads/downloads-action.php?file=/ejabberd/14.07/ejabberd-14.07.tgz" && \
-    tar xf ejabberd-14.07.tgz && \
-    cd ejabberd-14.07 && \
+    curl -R -L -O "https://www.process-one.net/downloads/ejabberd/15.06/ejabberd-15.06.tgz" && \
+    tar xf ejabberd-15.06.tgz && \
+    cd ejabberd-15.06 && \
     ./configure \
       --enable-user=ejabberd \
       --enable-nif \
