@@ -48,12 +48,6 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/
     recode latin1..utf8 deps/lhttpc/src/lhttpc.app.src && \
     make && \
     make install && \
-    mkdir -p /src/ejabberd-contrib && \
-    git clone https://github.com/processone/ejabberd-contrib.git && \
-    cd ejabberd-contrib/mod_admin_extra && \
-    ./build.sh && \
-    cp -a ebin/. //lib/ejabberd/ebin  && \
-    cd / && rm -rf /src/ejabberd-contrib && \
     cd / && rm -rf /src/ejabberd && \
     apt-get -y remove \
       m4 git libncurses5-dev libssh-dev libyaml-dev libexpat-dev libssl-dev \
